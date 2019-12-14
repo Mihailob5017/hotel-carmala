@@ -1,0 +1,42 @@
+$primaryColor: #e1e1e1;
+$backgroundColor: #020202;
+$shadow: 1px 1px 1px $backgroundColor;
+.room {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 15px 75px;
+  cursor: pointer;
+  &:hover {
+    .room-btn {
+      background-color: rgba($backgroundColor, $alpha: 0.5);
+    }
+    .room-btn {
+      opacity: 1;
+    }
+  }
+
+  .room-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    left: 50%;
+  }
+  .room-btn {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-204px);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 500ms;
+  }
+  .room-btn * {
+    color: $primaryColor;
+    font-size: 2em;
+    text-shadow: $shadow;
+  }
+}

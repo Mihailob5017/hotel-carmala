@@ -1,0 +1,20 @@
+//imports
+@import "./HomeCss/_homePage.scss";
+@import "./RoomCss/_roomPage.scss";
+@import "./NavbarCss/_navbar.scss";
+@import "./SearchCss/_searchPage.scss";
+@import "./AboutCss/_aboutPAge.scss";
+@import "./ContactCss/_contactPage.scss";
+//global variables
+$primaryColor: #e1e1e1;
+$backgroundColor: #020202;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  color: $primaryColor;
+}
+body {
+  overflow: hidden;
+}

@@ -1,0 +1,121 @@
+$primaryColor: #e1e1e1;
+$backgroundColor: #020202;
+$shadow: 1px 1px 1px black;
+.about-page-bg-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  filter: brightness(70%);
+  height: 100%;
+  .about-page-bg {
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+  }
+}
+.about-page-services-container {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  top: 20%;
+  bottom: 0;
+  background-color: rgba($backgroundColor, 0.5);
+  animation-name: slide-left;
+  animation-duration: 3500ms;
+  animation-timing-function: ease-in-out;
+  h1 {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid $primaryColor;
+    margin-bottom: 50px;
+  }
+}
+.about-page-services {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+
+  .service-single {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    text-align: center;
+    *:first-child {
+      font-size: 1.6em;
+    }
+  }
+}
+.about-page-history {
+  position: absolute;
+  left: 0;
+  width: 30%;
+  top: 20%;
+  bottom: 0;
+  background-color: rgba($backgroundColor, 0.5);
+  animation-name: slide-right;
+  animation-duration: 2500ms;
+  animation-timing-function: ease-in-out;
+  h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    border-bottom: 1px solid $primaryColor;
+  }
+  p {
+    font-size: 1.2em;
+    padding: 0px 10px;
+    line-height: 1.3em;
+  }
+}
+.about-in-general {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 30%;
+  top: 20%;
+  bottom: 0;
+
+  h1 {
+    background-color: rgba($backgroundColor, 0.5);
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+  .slideup-text {
+    font-size: 1.5em;
+    text-shadow: $shadow;
+    animation-name: slide-up-text;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+    margin-top: 20px;
+  }
+}
+@keyframes slide-up-text {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
